@@ -27,3 +27,13 @@ model Comment {
   postId    String?
   published Boolean @default(false)
 }
+
+model Category {
+  id        Int     @id
+  name      String
+  slug      String
+  parent_id String?
+  status    Boolean @default(false)
+
+  @@map(name: "categories")
+}
